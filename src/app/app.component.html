@@ -1,0 +1,29 @@
+	<div class="page-body cus-page-body" style="padding-left:20px; padding-right:20px;padding-top:20px">
+  <h2>Binding huge data set in dropdown</h2>
+	<h5>Handle large data set in the dropdown with serverside search and searver side scroll</h5>
+  <p> Check
+    <a target="_blank" href="https://medium.com/@codingindepth"> Coding In Depth</a> for more details.
+    </p>
+	<div class="row">
+		<div class="col-md-12">&nbsp;</div>
+	</div>
+
+<h5>ng-select virtual scroll</h5>
+
+<ng-select [items]="ngSelList" bindLabel="productName" bindValue="productName" placeholder="Select item"
+	[searchable]="true" [clearable]="false" [(ngModel)]="ngSelSelected" [virtualScroll]="true" [loading]="ngSelLoader"
+	(search)="searchProd($event)" (scrollToEnd)="scrollToEnd()" (open)="openDropdown($event)"
+	[ngModelOptions]="{standalone: true}">
+</ng-select>
+	<div class="row">
+		<div class="col-md-12">&nbsp;</div>
+	</div>
+  	<div class="row">
+		<div class="col-md-12">&nbsp;</div>
+	</div>
+<h5>PrimeNG Autocomplete</h5>
+<p-autoComplete [(ngModel)]="text" [suggestions]="results"  field="productName"(completeMethod)="search($event)" 
+ placeholder="Search product name" [forceSelection]="true"
+ [dropdown]="true"
+  ></p-autoComplete>
+	</div>
